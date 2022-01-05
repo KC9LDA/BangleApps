@@ -6,7 +6,7 @@
 */
 const FONT_NAME = 'Vector12';
 const FONT_SIZE = 80;
-const SCREEN_PIXELS = 240;
+const SCREEN_PIXELS = 176;
 const UNIT = 100;
 const MORSE_MAP = {
   A: '.-',
