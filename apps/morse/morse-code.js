@@ -141,8 +141,12 @@ writeLetter();
 setWatch(startBeep, BTN1, { repeat: true });
 
 //read touchscreen from banglejs2
-Bangle.on('swipe', function(dir) {
-  if (dir>0) step(true); else step(false);
+Bangle.setUI("updown",dir=>{
+  if (dir) {
+    step(true);
+  } else {
+    step(false);
+  }
 });
                                 
 // Allow user to switch between letters
