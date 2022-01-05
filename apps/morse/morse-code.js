@@ -147,6 +147,7 @@ setWatch(startBeep, BTN1, { repeat: true });
 Bangle.swipeHandler = dir => {
   if (dir>0) step(true); else step(false);
 };
+Bangle.on("swipe", Bangle.swipeHandler);
 
 // Allow user to switch between letters
 setWatch(step(true), BTN2, { repeat: true });
