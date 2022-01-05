@@ -143,10 +143,10 @@ setWatch(startBeep, BTN1, { repeat: true });
 //read touchscreen from banglejs2
 Bangle.setUI("updown",dir=>{
   if (dir) {
-    writeText("true");
+    writeText(dir);
     step(true);
   } else {
-    writeText("false");
+    writeText("btn");
     step(false);
   }
 });
