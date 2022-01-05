@@ -139,16 +139,12 @@ writeLetter();
 
 // Press the middle button to hear the morse code translation
 setWatch(startBeep, BTN1, { repeat: true });
+
 //read touchscreen from banglejs2
-//Bangle.on('swipe', dir => {
-//  if (dir == 1) step(true); else step(false);
-//});
-
-Bangle.swipeHandler = dir => {
+Bangle.on('swipe', function(dir) {
   if (dir>0) step(true); else step(false);
-};
-Bangle.on("swipe", Bangle.swipeHandler);
-
+});
+                                
 // Allow user to switch between letters
 setWatch(step(true), BTN2, { repeat: true });
 setWatch(step(false), BTN3, { repeat: true });
