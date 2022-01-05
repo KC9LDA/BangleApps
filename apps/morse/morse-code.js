@@ -142,13 +142,7 @@ setWatch(startBeep, BTN1, { repeat: true });
 
 //read touchscreen from banglejs2
 Bangle.setUI("updown",dir=>{
-  if (dir) {
-    writeText(dir);
-    step(true);
-  } else {
-    writeText("btn");
-    step(false);
-  }
+ step(dir);
 });
                                 
 // Allow user to switch between letters
