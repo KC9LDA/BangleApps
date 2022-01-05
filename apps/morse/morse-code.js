@@ -120,7 +120,8 @@ const startBeep = () => {
   }
 };
 
-const step = (positive) => () => {
+const step = (positive) => {
+  //console.log("step:" + positive);
   if (BEEPING) return;
   if (positive) {
     INDEX = INDEX + 1;
@@ -142,12 +143,16 @@ setWatch(startBeep, BTN1, { repeat: true });
 
 //read touchscreen from banglejs2
 Bangle.setUI("updown",dir=>{
- step(dir);
+  if (dir>0) {
+    step(true);
+  } else {
+    step(false); 
+  }
 });
                                 
 // Allow user to switch between letters
 //setWatch(step(true), BTN2, { repeat: true });
 //setWatch(step(false), BTN3, { repeat: true });
 // Toggle buzzing/beeping with the touchscreen
-setWatch(toggleBuzzing, BTN4, { repeat: true });
-setWatch(toggleBuzzing, BTN5, { repeat: true });
+//setWatch(toggleBuzzing, BTN4, { repeat: true });
+//setWatch(toggleBuzzing, BTN5, { repeat: true });
