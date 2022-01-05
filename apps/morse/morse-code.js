@@ -143,15 +143,17 @@ setWatch(startBeep, BTN1, { repeat: true });
 //read touchscreen from banglejs2
 Bangle.setUI("updown",dir=>{
   if (dir) {
+    writeText("true");
     step(true);
   } else {
+    writeText("false");
     step(false);
   }
 });
                                 
 // Allow user to switch between letters
-setWatch(step(true), BTN2, { repeat: true });
-setWatch(step(false), BTN3, { repeat: true });
+//setWatch(step(true), BTN2, { repeat: true });
+//setWatch(step(false), BTN3, { repeat: true });
 // Toggle buzzing/beeping with the touchscreen
 setWatch(toggleBuzzing, BTN4, { repeat: true });
 setWatch(toggleBuzzing, BTN5, { repeat: true });
