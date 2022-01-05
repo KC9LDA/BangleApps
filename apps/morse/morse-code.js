@@ -138,9 +138,9 @@ const toggleBuzzing = () => (BUZZING = !BUZZING);
 writeLetter();
 
 // Press the middle button to hear the morse code translation
-setWatch(startBeep, BTN2, { repeat: true });
+setWatch(startBeep, BTN1, { repeat: true });
 // Allow user to switch between letters
-setWatch(step(true), BTN1, { repeat: true });
+setWatch(step(true), BTN2, { repeat: true });
 setWatch(step(false), BTN3, { repeat: true });
 // Toggle buzzing/beeping with the touchscreen
 setWatch(toggleBuzzing, BTN4, { repeat: true });
