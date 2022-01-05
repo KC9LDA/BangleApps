@@ -1367,7 +1367,7 @@
   {
     "id": "morse",
     "name": "Morse Code",
-    "version": "0.11",
+    "version": "0.12",
     "description": "Learn morse code by hearing/seeing/feeling the code. Tap to toggle buzz!",
     "icon": "morse-code.png",
     "type": "app",
