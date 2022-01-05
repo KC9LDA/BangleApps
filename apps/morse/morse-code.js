@@ -141,7 +141,6 @@ writeLetter();
 setWatch(startBeep, BTN1, { repeat: true });
 //read touchscreen from banglejs2
 Bangle.on('swipe', dir => {
-  if (!swipe_enabled) return;
   if (dir == 1) step(true); else step(false);
 });
 // Allow user to switch between letters
